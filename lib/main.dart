@@ -4,14 +4,15 @@ void main() {
   runApp(const MyApp());
 }
 
+//the main function is the starting point for all our flutter Apps
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  //
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const HomeScreen(),
-    );
+    return MaterialApp(home: const HomeScreen());
   }
 }
 
@@ -21,37 +22,32 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("flutter is fun"),
-        backgroundColor: Colors.purple,
-        foregroundColor: Colors.white,
+      backgroundColor: Colors.teal,
+      // appBar: AppBar(
+      //   title: const Text("flutter is fun"),
+      //   backgroundColor: Colors.blueGrey[900],
+      //   foregroundColor: Colors.white,
+      // ),
+
+      
+      
+      
+      body: Container(
+        color: Colors.white,
       ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Navigate'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => const Screen2()),
-            );
-          },
-        ),
-      ),
+      
     );
   }
 }
 
-class Screen2 extends StatelessWidget {
-  const Screen2({super.key});
+// class ItemCount extends StatelessWidget {
+//   const ItemCount({super.key, required this.name, required this.count});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("screen 2"),
-        backgroundColor: Colors.purple,
-        foregroundColor: Colors.white,
-      ),
-    );
-  }
-}
+//   final String name;
+//   final int count;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Text('$name : $count');
+//   }
+// }
