@@ -28,12 +28,11 @@ class HomeScreen extends StatelessWidget {
       //   backgroundColor: Colors.blueGrey[900],
       //   foregroundColor: Colors.white,
       // ),
-
-      
-      
       
       body: Container(
         color: Colors.white,
+        child:
+         Text('HELO WORLD'),
       ),
       
     );
