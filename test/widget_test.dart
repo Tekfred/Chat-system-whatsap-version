@@ -1,24 +1,20 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:myapp/main.dart';
 
 void main() {
-  testWidgets('navigates to screen 2', (WidgetTester tester) async {
+  testWidgets('increments donuts when FAB is pressed', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
-    expect(find.text('flutter is fun'), findsOneWidget);
-    expect(find.text('screen 2'), findsNothing);
+    // initial value
+    expect(find.text('Number of donuts: 0'), findsOneWidget);
 
-    await tester.tap(find.text('Navigate'));
-    await tester.pumpAndSettle();
+    // Tap the FloatingActionButton (add icon)
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pump();
 
-    expect(find.text('screen 2'), findsOneWidget);
+    // value increments
+    expect(find.text('Number of donuts: 1'), findsOneWidget);
   });
 }

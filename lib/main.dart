@@ -4,15 +4,14 @@ void main() {
   runApp(const MyApp());
 }
 
-//the main function is the starting point for all our flutter Apps
+// The main function is the starting point for all Flutter apps.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  //
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: const HomeScreen());
+    return const MaterialApp(home: HomeScreen());
+    
   }
 }
 
@@ -22,32 +21,56 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal,
-      // appBar: AppBar(
-      //   title: const Text("flutter is fun"),
-      //   backgroundColor: Colors.blueGrey[900],
-      //   foregroundColor: Colors.white,
-      // ),
+      backgroundColor: Colors.teal[50],
+      body: SafeArea(
+        child: Row(
+          // verticalDirection: VerticalDirection.down,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+             Container(
+          width: 30.0,
+          color: Colors.white,
+          child: const Text(
+            'Container1 ',
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.teal,
+            ),
+          ),
+        ),
 
-      
-      
-      
-      body: Container(
-        color: Colors.white,
+        SizedBox(
+          width: 20.0
+          ),
+
+        Container(
+          height: 100.0,
+          color:Colors.blue,
+          child: const Text(
+            'Container2',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+        ),
+
+        Container(
+          height: 100.0,
+          color:Colors.red,
+          child: const Text(
+            'Container3',
+            style: TextStyle(fontSize: 18),
+            ),
+        ),
+
+        Container(
+          width: double.infinity,
+          ),
+          ]
+        ),
       ),
-      
     );
   }
 }
 
-// class ItemCount extends StatelessWidget {
-//   const ItemCount({super.key, required this.name, required this.count});
-
-//   final String name;
-//   final int count;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Text('$name : $count');
-//   }
-// }
