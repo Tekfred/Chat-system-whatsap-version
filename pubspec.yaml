@@ -51,5 +51,13 @@ flutter:
   uses-material-design: true
   assets:
     - Assets/images/profile.png
+    
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: Assets/Fonts/Pacifico-Regular.ttf
+    - family: SourceSansPro
+      fonts:
+        - asset: Assets/Fonts/SourceSans3-VariableFont_wght.ttf
 
   
