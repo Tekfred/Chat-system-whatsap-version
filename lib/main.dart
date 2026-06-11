@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(home: HomeScreen());
-    
   }
 }
 
@@ -21,56 +20,111 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal[50],
+      backgroundColor: Colors.transparent,
       body: SafeArea(
-        child: Row(
-          // verticalDirection: VerticalDirection.down,
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        child: Column(
+          // verticalDirection: VerticalDirection.up,
+          mainAxisAlignment: MainAxisAlignment.center,
+          
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-             Container(
-          width: 30.0,
-          color: Colors.white,
-          child: const Text(
-            'Container1 ',
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.teal,
+            Center(
+            child: CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('Assets/images/profile.png'
+                ),
+              )
             ),
-          ),
-        ),
-
-        SizedBox(
-          width: 20.0
-          ),
-
-        Container(
-          height: 100.0,
-          color:Colors.blue,
-          child: const Text(
-            'Container2',
-            style: TextStyle(
-              fontSize: 18,
+            Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'Freddy Aiyce',
+                    style: TextStyle(
+                      fontSize: 40.0,
+                      fontFamily: 'Pacifico',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.teal,
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
+                  Text(
+                    'Flutter Developer',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'SourceSansPro',
+                      color: Colors.white,
+                      letterSpacing: 2.5,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ),
 
-        Container(
-          height: 100.0,
-          color:Colors.red,
-          child: const Text(
-            'Container3',
-            style: TextStyle(fontSize: 18),
+            SizedBox(height: 20.0),
+
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              // padding: EdgeInsets.all(10.0),
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.phone,
+                    color: Colors.teal, 
+                    // size: 30.0,
+                  ),
+                  title: Text('++257 79 99 99 34 ',
+                      style: TextStyle(
+                        color: Colors.teal,
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0,
+                      ),
+                )
+              ),
             ),
-        ),
+            ),
 
-        Container(
-          width: double.infinity,
-          ),
-          ]
+            // const SizedBox(width: 10.0),
+            
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              // padding: EdgeInsets.all(10.0),
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              child: Padding(
+                // mainAxisSize: MainAxisSize.min,
+                padding: const EdgeInsets.all(20.0),
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.email,
+                    color: Colors.teal, 
+                    // size: 30.0,
+                  ),
+                  title: Text(
+                    'freddy@example.com',
+                    style: TextStyle(
+                      color: Colors.teal,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
+                    ),
+                  )
+
+                )
+                
+                
+
+            ),
+            )
+
+          ],
         ),
       ),
     );
   }
 }
-
