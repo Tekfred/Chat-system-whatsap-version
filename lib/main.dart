@@ -64,64 +64,65 @@ class HomeScreen extends StatelessWidget {
 
             SizedBox(height: 20.0),
 
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
+            Card(
+              shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
-              padding: EdgeInsets.all(10.0),
+              // padding: EdgeInsets.all(10.0),
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-              child: Row(
-                // mainAxisSize: MainAxisSize.min,
-                children: [
-                const Icon(
-                  Icons.phone,
-                  color: Colors.teal,
-                  // size: 30.0,
-                ),
-                const SizedBox(width: 10.0),
-                Text('++257 79 99 99 34 ',
-                  style: TextStyle(
-                    color: Colors.teal,
-                    fontFamily: 'SourceSansPro',
-                    fontSize: 20.0,
-                  ))
-
-              ],
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.phone,
+                    color: Colors.teal, 
+                    // size: 30.0,
+                  ),
+                  title: Text('++257 79 99 99 34 ',
+                      style: TextStyle(
+                        color: Colors.teal,
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0,
+                      ),
+                )
+              ),
             ),
             ),
 
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
+            // const SizedBox(width: 10.0),
+            
+            Card(
+              shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
-              padding: EdgeInsets.all(10.0),
+              // padding: EdgeInsets.all(10.0),
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-              child: Row(
+              child: Padding(
                 // mainAxisSize: MainAxisSize.min,
-                children: [
-                const Icon(
-                  Icons.email,
-                  color: Colors.teal,
-                  // size: 30.0,
-                ),
-                const SizedBox(width: 10.0),
-                Text('freddy@example.com',
-                  style: TextStyle(
-                    color: Colors.teal,
-                    fontFamily: 'SourceSansPro',
-                    fontSize: 20.0,
-                  ))
+                padding: const EdgeInsets.all(20.0),
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.email,
+                    color: Colors.teal, 
+                    // size: 30.0,
+                  ),
+                  title: Text(
+                    'freddy@example.com',
+                    style: TextStyle(
+                      color: Colors.teal,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
+                    ),
+                  )
 
-              ],
+                )
+                
+                
+
             ),
             )
 
           ],
-          
-
-
         ),
       ),
     );
