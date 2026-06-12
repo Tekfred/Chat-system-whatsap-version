@@ -50,7 +50,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - Assets/images/profile.png
+    - Assets/images/
     
   fonts:
     - family: Pacifico
